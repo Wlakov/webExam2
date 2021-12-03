@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+    <script>
+        let table=document.createElement('table');
+        table.className="myTable";
+        document.body.appendChild(table)
+        let tbody=document.createElement('tbody');
+        table.appendChild(tbody);
+        let tr1=document.createElement('tr');
+        let tr2=document.createElement('tr');
+        let tr3=document.createElement('tr');
+        let tr4=document.createElement('tr');
+        let tr5=document.createElement('tr');
+        tbody.appendChild(tr1);
+        tbody.appendChild(tr2);
+        tbody.appendChild(tr3);
+        tbody.appendChild(tr4);
+        tbody.appendChild(tr5);
+       //start
+        let td11=document.createElement('td');
+        td11.innerHTML='№ п/п'
+        let td12=document.createElement('td');
+        td12.innerHTML='Звання'
+        let td13=document.createElement('td');
+        td13.innerHTML='ПІБ'
+        let td14=document.createElement('td');
+        td14.innerHTML='ВІК'
+        tr1.appendChild(td11);
+        tr1.appendChild(td12);
+        tr1.appendChild(td13);
+        tr1.appendChild(td14);
+
+        let td21=document.createElement('td');
+        td21.innerHTML='1.'
+        let td22=document.createElement('td');
+        td22.innerHTML='сержант'
+        let td23=document.createElement('td');
+        td23.innerHTML='Степанов Степан Степанович'
+        let td24=document.createElement('td');
+        td24.innerHTML='33';
+        td24.setAttribute('id','f')
+        tr2.appendChild(td21);
+        tr2.appendChild(td22);
+        tr2.appendChild(td23);
+        tr2.appendChild(td24);
+
+        let td31=document.createElement('td');
+        td31.innerHTML='2.'
+        let td32=document.createElement('td');
+        td32.innerHTML='лейтенант'
+        let td33=document.createElement('td');
+        td33.innerHTML='Федоров Федір Федорович'
+        let td34=document.createElement('td');
+        td34.innerHTML='25'
+        td34.setAttribute('id','s')
+        tr3.appendChild(td31);
+        tr3.appendChild(td32);
+        tr3.appendChild(td33);
+        tr3.appendChild(td34);
+
+        let td41=document.createElement('td');
+        td41.innerHTML='3.'
+        let td42=document.createElement('td');
+        td42.innerHTML='майор';
+        let td43=document.createElement('td');
+        td43.innerHTML='Антоненко Антон Антонович'
+        let td44=document.createElement('td');
+        td44.innerHTML='31'
+        td44.setAttribute('id','t')
+        tr4.appendChild(td41);
+        tr4.appendChild(td42);
+        tr4.appendChild(td43);
+        tr4.appendChild(td44);
+
+        let td51=document.createElement('td');
+        td51.innerHTML=''
+        let td52=document.createElement('td');
+        td52.innerHTML=''
+        let td53=document.createElement('td');
+        td53.innerHTML='Середній вік:'
+        let td54=document.createElement('td');
+        td54.setAttribute('id','res')
+        tr5.appendChild(td51);
+        tr5.appendChild(td52);
+        tr5.appendChild(td53);
+        tr5.appendChild(td54);
+
+        table.setAttribute('border','1')
+        let but = document.createElement('button');
+        document.body.appendChild(but)
+        but.innerHTML='START'
+        but.setAttribute('id','but1')
+        let f= parseInt(document.getElementById('f').innerText)
+        let s= parseInt(document.getElementById('s').innerText)
+        let t= parseInt(document.getElementById('t').innerText)
+        let r= document.getElementById('res')
+        let sum=(f+s+t)/3
+        document.getElementById("but1").addEventListener("click",function (){
+            r.innerText=sum.toString()
+        })
+    </script>
+
+
+</body>
+</html>
